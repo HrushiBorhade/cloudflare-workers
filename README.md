@@ -99,3 +99,20 @@ https://discord.cloudflare.com
 ```
 ➜  cloudflare-workers git:(main) npm run dev
 ```
+
+➜  cloudflare-workers git:(main) ✗ npm run deploy
+
+> cloudflare-workers@0.0.0 deploy
+> wrangler deploy
+
+
+ ⛅️ wrangler 4.5.0
+------------------
+
+Total Upload: 0.67 KiB / gzip: 0.33 KiB
+No bindings found.
+Uploaded cloudflare-workers (7.07 sec)
+Deployed cloudflare-workers triggers (1.33 sec)
+  https://cloudflare-workers.hrushiborhade123.workers.dev
+Current Version ID: f4da777c-aea8-4390-8cbd-b2280f046021
+```

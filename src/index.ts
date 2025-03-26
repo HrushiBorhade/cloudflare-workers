@@ -13,6 +13,24 @@
 
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
-		return new Response('Hello World!');
+		console.log('body', request.body);
+		console.log('headers', request.headers);
+
+		let uri = request.url.replace(/^https:\/\/.*?\//gi, '/');
+		console.log('uri', uri);
+		if (request.method === 'GET') {
+			if (uri === '/users') {
+				return Response.json({
+					message: 'Response for GET request on /users',
+				});
+			}
+			return Response.json({
+				message: 'You sent a GET request',
+			});
+		} else {
+			return Response.json({
+				message: 'You did not send a GET request',
+			});
+		}
 	},
 } satisfies ExportedHandler<Env>;
